@@ -1,0 +1,73 @@
+import 'package:flutter/material.dart';
+
+class BalanceCard extends StatelessWidget {
+  const BalanceCard({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          opacity: 0.8,
+          image: AssetImage('assets/images/account-info-background.png'),
+          fit: BoxFit.cover,
+          repeat: ImageRepeat.noRepeat,
+          colorFilter: ColorFilter.mode(
+          Color(0xFF6366F1), 
+            BlendMode.multiply,
+          ),
+        ),
+        borderRadius: BorderRadius.circular(20),
+        color: Color(0xFF6366F1),
+      ),
+      child: Column(
+        spacing: 12,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [ 
+              //total balance and view icon
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                spacing: 4,
+                children: [
+                  Text(
+                    'Total Balance',
+                    style: TextStyle(
+                      color: Color(0xFFCCCCCC),
+                      fontSize: 12,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  Image(
+                    image: AssetImage('assets/icons/view.png'),
+                    height: 16,
+                    width: 16,
+                  ),
+                ],
+              ),
+            ],
+          ),
+          //balance amount and change
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                '\$12,345.67',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 32,
+                  fontWeight: FontWeight.w700,
+                  letterSpacing: -1,
+                ),
+              ),
+            ]
+          )
+        ]
+      )
+    );
+  }
+}
