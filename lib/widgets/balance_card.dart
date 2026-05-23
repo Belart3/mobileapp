@@ -10,7 +10,7 @@ class BalanceCard extends StatelessWidget {
       decoration: BoxDecoration(
         image: DecorationImage(
           opacity: 0.8,
-          image: AssetImage('assets/images/account-info-background.png'),
+          image: AssetImage('assets/images/ripple-pattern.png'),
           fit: BoxFit.cover,
           repeat: ImageRepeat.noRepeat,
           colorFilter: ColorFilter.mode(
@@ -49,6 +49,31 @@ class BalanceCard extends StatelessWidget {
                   ),
                 ],
               ),
+              Container(
+                padding: EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: Color.fromRGBO(255, 255, 255, 0.2),
+                  borderRadius: BorderRadius.circular(32),
+                ),
+                child: Row(
+                  spacing: 4,
+                  children: [
+                    Text(
+                      'NGN',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    Image(
+                      image: AssetImage('assets/icons/arrow-down.png'),
+                      height: 12,
+                      width: 12,
+                    ),
+                  ]
+                )
+              )
             ],
           ),
           //balance amount and change
