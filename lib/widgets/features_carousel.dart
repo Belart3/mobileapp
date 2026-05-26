@@ -8,6 +8,7 @@ class FeaturesCarousel extends StatelessWidget {
     return Container(
       height: 140,
       color: Colors.transparent,
+      margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
       child: CarouselView(
         itemExtent: 300,
         shrinkExtent: 300,

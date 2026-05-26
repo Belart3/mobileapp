@@ -7,6 +7,7 @@ class CompleteProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(20),
+      margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
       decoration: BoxDecoration(
         color: Color(0xFF6366F1),
         borderRadius: BorderRadius.circular(20),

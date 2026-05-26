@@ -7,6 +7,7 @@ class BalanceCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(20),
+      margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
       decoration: BoxDecoration(
         image: DecorationImage(
           opacity: 0.8,

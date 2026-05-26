@@ -4,6 +4,7 @@ import 'package:mobileapp/widgets/balance_card.dart';
 import 'package:mobileapp/widgets/actions_card.dart';
 import 'package:mobileapp/widgets/complete_profile.dart';
 import 'package:mobileapp/widgets/features_carousel.dart';
+import 'package:mobileapp/widgets/carousel.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -14,16 +15,16 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: backgroundColor,
       appBar: CustomAppBar(),
-      body: Padding(
-        padding: EdgeInsets.all(20),
+      body: SingleChildScrollView(
         child: Column(
           spacing: 20,
           children: [
             BalanceCard(),
             ActionsCard(),
             CompleteProfile(),
-            FeaturesCarousel(),
-          ]
+            //FeaturesCarousel(),
+            Carousel(),
+          ],
         ),
       )
     );
