@@ -21,13 +21,13 @@ class _CarouselState extends State<Carousel> {
     },
     {
       'title': 'Get paid globally with our \nvirtual bank accounts',
-      'buttonText': 'create virtual account',
+      'buttonText': 'Create Virtual Account',
       'imagePath': 'assets/images/feature-2.png',
       'color': '0xFF10B981',
     },
     {
       'title': 'Get paid globally with our \nvirtual bank accounts',
-      'buttonText': 'create virtual account',
+      'buttonText': 'Create Virtual Account',
       'imagePath': 'assets/images/feature-2.png',
       'color': '0xFF10B981',
     },

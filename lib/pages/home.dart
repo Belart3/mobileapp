@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:mobileapp/widgets/bottom_nav.dart';
 import 'package:mobileapp/widgets/custom_app_bar.dart';
 import 'package:mobileapp/widgets/balance_card.dart';
 import 'package:mobileapp/widgets/actions_card.dart';
 import 'package:mobileapp/widgets/complete_profile.dart';
-import 'package:mobileapp/widgets/features_carousel.dart';
 import 'package:mobileapp/widgets/carousel.dart';
+import 'package:mobileapp/widgets/recent_transactions.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -15,18 +16,24 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: backgroundColor,
       appBar: CustomAppBar(),
+      extendBody: true,
       body: SingleChildScrollView(
-        child: Column(
-          spacing: 20,
+        child: Stack(
           children: [
-            BalanceCard(),
-            ActionsCard(),
-            CompleteProfile(),
-            //FeaturesCarousel(),
-            Carousel(),
+            Column(
+              spacing: 20,
+              children: [
+                BalanceCard(),
+                ActionsCard(),
+                CompleteProfile(),
+                Carousel(),
+                RecentTransactions()
+              ],
+            ),
           ],
-        ),
-      )
+        )
+      ),
+      bottomNavigationBar: BottomNavBar(),
     );
   }
 }
