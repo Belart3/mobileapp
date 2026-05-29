@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
       appBar: CustomAppBar(),
       extendBody: true,
       body: SingleChildScrollView(
-        child: Stack(
+        child: Row(
           children: [
             Column(
               spacing: 20,

@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:mobileapp/pages/home.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mobileapp/pages/signup.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  await Supabase.initialize(
+    url: 'https://dfepqpnatvtordxddrpo.supabase.co',
+    anonKey: 'sb_publishable_1nNu3YkMag4yFBt3crwFEg_SpN_LIKD',
+  );
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -17,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: GoogleFonts.inter().fontFamily,
       ),
-      home: HomePage(),
+      home: Signup(),
     );
   }
 }
